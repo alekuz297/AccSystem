@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountsController">
+   <children>
+      <Separator layoutY="14.0" prefHeight="4.0" prefWidth="1000.0" />
+      <Separator layoutY="128.0" prefHeight="4.0" prefWidth="1000.0" />
+      <VBox layoutX="701.0" layoutY="615.0" prefHeight="85.0" prefWidth="264.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="273.0" text="NP - Converted Securities">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="266.0" text="NR - Accrued Interest on Fiduciary Loans">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="268.0" text="NS - Accrued Interest from Derivatives">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="269.0" text="NT - Fixed Income Premium Amortization">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="25.0" layoutY="26.0" prefHeight="17.0" prefWidth="101.0" text="Re-evaluation" />
+      <TableView fx:id="accountTable" editable="true" layoutX="439.0" layoutY="150.0" prefHeight="432.0" prefWidth="543.0">
+        <columns>
+          <TableColumn fx:id="accIsinColumn" prefWidth="103.0" text="isin" />
+          <TableColumn fx:id="accTotalIsinColumn" prefWidth="103.0" text="total_per_isin" />
+            <TableColumn fx:id="accCurrencyColumn" prefWidth="43.0" text="forex" />
+            <TableColumn fx:id="accPortfolioColumn" prefWidth="43.0" text="prtfl" />
+            <TableColumn fx:id="accPriceColumn" minWidth="0.0" prefWidth="90.0" text="price" />
+            <TableColumn fx:id="accQuantityColumn" minWidth="0.0" text="quantity" />
+            <TableColumn fx:id="accDateColumn" minWidth="0.0" text="date" />
+        </columns>
+      </TableView>
+      <Button fx:id="MakeRevaluation" layoutX="412.0" layoutY="53.0" mnemonicParsing="false" onAction="#makeRevaluation" text="Make_Re-evaluation" />
+      <TextArea fx:id="resultArea" layoutX="583.0" layoutY="26.0" prefHeight="85.0" prefWidth="399.0" promptText="ResultArea" />
+      <Button layoutX="176.0" layoutY="53.0" mnemonicParsing="false" onAction="#checkTheDate" prefHeight="25.0" prefWidth="113.0" text="Check_The_Date" />
+      <Label layoutX="25.0" layoutY="139.0" text="Accounts_Info" />
+      <VBox layoutX="368.0" layoutY="615.0" prefHeight="85.0" prefWidth="264.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="265.0" text="NF - Derivatives Revaluation">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="274.0" text="NJ - Shares">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="270.0" text="NK - Share Re-evaluation RealTime">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="50.0" prefHeight="17.0" prefWidth="270.0" text="NM - Funds">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="25.0" layoutY="596.0" prefHeight="104.0" prefWidth="264.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="416.0" text="NA - Fixed Income Bond">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="277.0" text="NB - Fixed Income Bond Premium">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="273.0" text="NC - Fixed Income Bond Coupon">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="266.0" text="ND - Accrued Interest Fixed Income Bond">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="70.0" prefHeight="17.0" prefWidth="266.0" text="NE - Re-evoluation at Price End Of Day">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Separator layoutY="709.0" prefHeight="4.0" prefWidth="1000.0" />
+      <VBox layoutX="25.0" layoutY="211.0" prefHeight="365.0" prefWidth="210.0" spacing="65.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="210.0" text="Current_Value_Total in USD">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="270.0" text="Invest_Quantity_&amp;_Average_Price ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="208.0" text="Re-evaluation_per_ Instruments">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Re-evaluation Portfolio">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="Show" layoutX="360.0" layoutY="214.0" mnemonicParsing="false" onAction="#currentValueTotal" prefHeight="25.0" prefWidth="58.0" text="Show" />
+      <Button layoutX="360.0" layoutY="291.0" mnemonicParsing="false" onAction="#investQuantityPrice" prefHeight="25.0" prefWidth="58.0" text="Show" />
+      <Button layoutX="360.0" layoutY="381.0" mnemonicParsing="false" onAction="#revaluationPerInstrument" prefHeight="25.0" prefWidth="58.0" text="Show" />
+      <Button layoutX="360.0" layoutY="468.0" mnemonicParsing="false" onAction="#revaluationPerPortfolio" prefHeight="25.0" prefWidth="58.0" text="Show" />
+      <Button fx:id="clear" layoutX="448.0" layoutY="86.0" mnemonicParsing="false" onAction="#clearResultArea" text="Clear" />
+      <Label layoutX="135.0" layoutY="90.0" text="Check The Last date of Re-evaluation" />
+      <Label fx:id="CurrentValueTotal" layoutX="283.0" layoutY="216.0" text="0.00 " textFill="#da0909">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <DatePicker fx:id="revalueDate" layoutX="244.0" layoutY="381.0" prefHeight="25.0" prefWidth="90.0" />
+      <ChoiceBox fx:id="choosePortfolio" layoutX="244.0" layoutY="468.0" prefHeight="25.0" prefWidth="90.0" />
+      <DatePicker fx:id="revaluePortfolioDate" layoutX="244.0" layoutY="518.0" prefHeight="25.0" prefWidth="90.0" />
+   </children>
+</AnchorPane>

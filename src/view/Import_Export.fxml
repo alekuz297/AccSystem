@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Import_ExportController">
+   <children>
+      <Button fx:id="ImportBtn" layoutX="100.0" layoutY="148.0" mnemonicParsing="false" onAction="#importCsv" text="Import_EOD" />
+      <Button layoutX="690.0" layoutY="46.0" mnemonicParsing="false" onAction="#createAndSaveXmlFile" text="Create_&amp;_Save_XML" />
+      <Label fx:id="FileName" layoutX="403.0" layoutY="81.0" text="Path" />
+      <TextField fx:id="Load" layoutX="100.0" layoutY="98.0" prefHeight="25.0" prefWidth="302.0" promptText="FileToLoad" />
+      <Button fx:id="find" layoutX="221.0" layoutY="46.0" mnemonicParsing="false" onAction="#findCsvFile" prefHeight="25.0" prefWidth="61.0" text="Find" />
+      <Separator layoutY="14.0" prefHeight="4.0" prefWidth="1000.0" />
+      <Separator layoutY="709.0" prefHeight="4.0" prefWidth="1000.0" />
+      <TextArea fx:id="showXml" layoutX="600.0" layoutY="96.0" prefHeight="591.0" prefWidth="302.0" />
+      <TextArea fx:id="showPricesEod" layoutX="100.0" layoutY="203.0" prefHeight="484.0" prefWidth="302.0" />
+      <Button layoutX="321.0" layoutY="148.0" mnemonicParsing="false" onAction="#showPrices" text="Show_Prices" />
+      <Separator layoutX="500.0" layoutY="15.0" orientation="VERTICAL" prefHeight="696.0" prefWidth="4.0" />
+      <Label layoutX="35.0" layoutY="29.0" text="Import" />
+      <Label layoutX="925.0" layoutY="29.0" text="Export" />
+      <Button layoutX="211.0" layoutY="148.0" mnemonicParsing="false" onAction="#importFX" prefHeight="25.0" prefWidth="79.0" text="Import_FX" />
+   </children>
+</AnchorPane>
